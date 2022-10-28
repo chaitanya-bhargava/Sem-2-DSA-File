@@ -43,35 +43,6 @@ void addElem(int n,Node** root){
     }
 }
 
-void delELem(int n,Node** root){
-    Node* newnode;
-    if((*root)==NULL){
-        return;
-    }
-        Node* temp=*root;
-        if(temp->left->data==n){
-            temp->left=NULL;
-        }
-        else if(temp->right->data==n){
-            temp->right=NULL;
-        }
-        else if(n<temp->data){
-            if(temp->left==NULL){
-                cout<<"Element not found"<<endl;
-                return;
-            }
-            temp=temp->left;
-            delELem(n,&temp);
-        }
-        else if(n>temp->data){
-            if(temp->right==NULL){
-                cout<<"Element not found"<<endl;
-                return;
-            }
-            temp=temp->right;
-            delELem(n,&temp);
-        }
-    }
 
 
 void Preorder(Node* root){
@@ -110,13 +81,6 @@ int main(){
     for(int i=0;i<10;i++){
         addElem(arr[i],&root);
     }
-    Preorder(root);
-    cout<<endl;
-    Postorder(root);
-    cout<<endl;
-    Inorder(root);
-    cout<<endl;
-    delELem(5,&root);
     Preorder(root);
     cout<<endl;
     Postorder(root);

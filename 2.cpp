@@ -53,8 +53,7 @@ int main(){
         cin>>arr[i];
     }
     int ans;
-    while(1){
-    cout<<"------------------------------\n1.Insert element at start\n2.Insert element at end\n3.Insert element at an index\n4.Delete element at start\n5.Delete element at end\n6.Delete element at an index\n7.Quit\n------------------------------\nChoose operation{1,2,3,4,5,6,7}:\n";
+    cout<<"------------------------------\n1.Insert element at start\n2.Insert element at end\n3.Insert element at an index\n4.Delete element at start\n5.Delete element at end\n6.Delete element at an index\n------------------------------\nChoose operation{1,2,3,4,5,6}:\n";
     cin>>ans;
     int n;
     switch (ans)
@@ -89,9 +88,6 @@ int main(){
         cin >> index2;
         middelete(arr,index2,&size);
         break;
-    case 7:
-        cout<<"Quitting...";
-        exit(0);
     default:
         cout<<"Wrong entry..."<<endl;
         break;
@@ -99,7 +95,6 @@ int main(){
     for (int i = 0; i < size; i++)
     {
         cout << arr[i] << "\t";
-    }
     }
     return 0;
 }
